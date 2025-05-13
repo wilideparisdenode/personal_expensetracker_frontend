@@ -7,12 +7,12 @@
     <button type="submit">Add Task</button>
   </form>
 
-  @for ( task of tasks(); track task.UserId) {
+  @for ( task of tasks(); track task.userId) {
     <div class="task-item">
       <h3>{{ task.title }}</h3>
       <p>{{ task.description }}</p>
       <button (click)="editTask(task)">Edit</button>
-      <button (click)="deleteTask(task.UserId)">Delete</button>
+      <button (click)="deleteTask(task.userId)">Delete</button>
     </div>
   }
 

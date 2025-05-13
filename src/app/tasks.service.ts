@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable({ providedIn: 'root' })
 export class TaskService {
-  private URL = 'http://localhost:5000/api/tasks';
+  private URL = 'https://personal-expensetracker-backend-673k.onrender.com/api/tasks';
 
   constructor(private http: HttpClient) {}
 

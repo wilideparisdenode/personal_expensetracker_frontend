@@ -35,6 +35,7 @@ export class DashboardComponent implements OnInit {
       next: (res: any) => {
         console.log(res)
         this.tasks.set( res);
+        console.log(res)
       },
       error: (err) => {
         console.error(err);
@@ -55,7 +56,7 @@ export class DashboardComponent implements OnInit {
   deleteTask(id: string) {
     this.taskService.deleteTask(id).subscribe({
       next: () => this.loadTasks(),
-      error: (err) => alert('Failed to delete task')
+      error: (err) =>console.log(err.message)
     });
   }
 
@@ -65,7 +66,7 @@ export class DashboardComponent implements OnInit {
       const updatedTask = { ...task, title: updatedTitle };
       this.taskService.updateTask(task._id, updatedTask).subscribe({
         next: () => this.loadTasks(),
-        error: (err) => alert('Failed to update task')
+        error: (err) => console.log(err.message)
       });
     }
   }

@@ -1,5 +1,5 @@
 export type  task={
-UserId:string,
+userId:string,
 title:string,
 completed:boolean,
 description:string
