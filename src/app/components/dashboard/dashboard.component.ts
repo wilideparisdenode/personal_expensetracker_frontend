@@ -4,11 +4,11 @@ import { TaskService } from '../../tasks.service';
 import { AuthService } from '../../auth.service';
 import { Router } from '@angular/router';
 import { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-
+import { NavbarComponent } from '../navbar/navbar.component';
 @Component({
   selector: 'app-dashboard',
   standalone: true, // Ensure this is set to true if it's a standalone component
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule,NavbarComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })

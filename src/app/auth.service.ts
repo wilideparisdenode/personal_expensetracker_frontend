@@ -6,7 +6,7 @@ import { tap } from 'rxjs/operators';  // Import tap
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   private URL = 'https://personal-expensetracker-backend-673k.onrender.com/api/auth';
-
+  //https://personal-expensetracker-backend-673k.onrender.com/
   constructor(private http: HttpClient, private router: Router) {}
 
   register(user: any) {
