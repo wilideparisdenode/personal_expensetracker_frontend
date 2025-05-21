@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">task_traker</string>
+    <string name="title_activity_main">task_traker</string>
+    <string name="package_name">com.exaple.task_tracker</string>
+    <string name="custom_url_scheme">com.exaple.task_tracker</string>
+</resources>

@@ -4,12 +4,17 @@
   <form [formGroup]="newTask" (ngSubmit)="createTask()">
     <input formControlName="title" type="text" placeholder="Task Title" required>
     <input formControlName="description" type="text" placeholder="Description">
+    <select formControlName="category">
+      <option value="Work">Work</option>
+      <option value="Personal">Personal</option>
+      <option value="Shopping">Shopping</option>
+    </select>
     <button type="submit">Add Task</button>
   </form>
 
   @for ( task of tasks(); track task._id) {
     <div class="task-item">
-      <h3>{{ task.title }}</h3>
+      <h3>{{ task.title }}<small>({{ task.category }})</small></h3>
       <p>{{ task.description }}</p>
       <button (click)="editTask(task)">Edit</button>
       <button (click)="deleteTask(task._id)">Delete</button>

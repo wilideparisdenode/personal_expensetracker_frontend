@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { RouterLink } from '@angular/router';
 import { AuthService } from '../../auth.service';
@@ -19,7 +19,7 @@ export class LoginComponent {
     username:new FormControl('',[Validators.required]),
     password:new FormControl('',[Validators.required,Validators.min(8)])
   });
-
+googlesignin="http://localhost:5000/api/auth/google";
   constructor(private authService: AuthService, private router: Router) {}
 
   onLogin() {
